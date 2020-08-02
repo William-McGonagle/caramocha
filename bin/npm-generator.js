@@ -2,17 +2,15 @@ const fs = require('fs');
 const path = require('path');
 
 var fileData = {
-  "name": "name",
+  "name": "",
   "version": "0.0.0",
-  "description": "description",
+  "description": "",
   "main": "index.js",
   "scripts": {},
   "repository": {},
   "keywords": [],
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "author": "author",
+  "dependencies": {},
+  "author": "",
   "license": "UNLICENSED"
 };
 
@@ -66,7 +64,7 @@ function addDependency(name, version) {
 
 function generateNPMFile() {
 
-  fs.writeFileSync(path.join(process.cwd, './package.json'), JSON.stringify(fileData, 4, null));
+  fs.writeFileSync(path.join(process.cwd(), './package.json'), JSON.stringify(fileData, null, 4));
 
 }
 

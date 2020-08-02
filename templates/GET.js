@@ -1,8 +1,7 @@
 // return finished code
 function generateCode(parameters) {
 
-  return `
-  if (req.body.${parameters[1]} == undefined) return res.status(400).send('${parameters[2]}');
+  return `if (req.body.${parameters[1]} == undefined) return res.status(400).send('${parameters[2]}');
 
   ${parameters[0]}.findOne({
     where: {
@@ -19,8 +18,7 @@ function generateCode(parameters) {
     console.log(error);
     return res.status(500).send('${parameters[4]}');
 
-  });
-  `;
+  });`;
 
 }
 

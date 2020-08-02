@@ -87,7 +87,7 @@ async function run() {
           var paramPath = (await ask("    object param path: "));
           var paramMethod = (await ask("    object param method: "));
           var paramType = (await ask("    object param type: (GET, CREATE, LOGIN, SIGNUP) "));
-          var paramParams = []; // Generate Paramters
+          var paramParams = require('../templates/' + paramType + ".js").generateParameters(objectName);
 
           objectPaths.push({
             path: paramPath,

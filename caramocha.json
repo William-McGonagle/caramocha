@@ -39,7 +39,13 @@
                     "path": "/:id/",
                     "method": "get",
                     "type": "GET",
-                    "params": []
+                    "params": [
+                      "User",
+                      "id",
+                      "Sorry, Not All Parameters Given.",
+                      "User with Given Index not Found",
+                      "Internal Database Error"
+                    ]
                 }
             ]
         }

@@ -1,7 +1,7 @@
 // return finished code
 function generateCode(parameters) {
 
-
+  return "";
 
 }
 
@@ -15,9 +15,7 @@ function generateParameters(model) {
 // return parameters for OAPI 3.0 file
 function generateOAPIParameters() {
 
-  return [
-    {}
-  ];
+  return [];
 
 }
 

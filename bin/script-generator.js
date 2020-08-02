@@ -64,26 +64,6 @@ function beautify(data) {
 
 }
 
-console.log(sectionDelimiter('imports'));
-
-console.log(require({
-  'express': 'express',
-  'Sequelize': 'sequelize',
-  'jwt': 'jsonwebtoken'
-}));
-
-console.log(sectionDelimiter('models'));
-
-console.log(sequelizeObject('User', {
-  'name': 'string',
-  'age': 'integer',
-  'bio': 'text'
-}));
-
-console.log(sectionDelimiter('endpoints'))
-
-console.log(endpoint('res.status(201).send("cool");', 'get', '/coolio'));
-
 module.exports = {
   endpoint: endpoint,
   beautify: beautify,
