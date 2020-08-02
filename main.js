@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var branches = {
   'start': require('./branches/start.js'),
   'generate': require('./branches/generateAll.js'),
