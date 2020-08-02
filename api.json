@@ -1,0 +1,64 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "version": "1.0.0",
+        "title": "cat-maker",
+        "description": "Design your custom cats in whatever way you want.",
+        "termsOfService": "",
+        "contact": {
+            "name": "William McGonagle",
+            "email": "",
+            "url": ""
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000/",
+            "description": "Local server"
+        }
+    ],
+    "tags": [
+        {
+            "name": "User"
+        }
+    ],
+    "paths": {
+        "/api/v1/User/signup": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "description": "",
+                "operationId": "USER/SIGNUP",
+                "parameters": [],
+                "responses": []
+            }
+        },
+        "/api/v1/User/login": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "description": "",
+                "operationId": "USER/LOGIN",
+                "parameters": [],
+                "responses": []
+            }
+        },
+        "/api/v1/User/:id/": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "description": "",
+                "operationId": "USER/:ID/",
+                "parameters": [],
+                "responses": []
+            }
+        }
+    }
+}
