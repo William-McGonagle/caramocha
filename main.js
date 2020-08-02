@@ -9,9 +9,15 @@ var branches = {
   'help': require('./branches/help.js')
 };
 
-if (process.argv[2] == undefined) return console.log('Please specify a command... type help for a list of commands.');
-if (branches[process.argv[2]] == undefined) return console.log('Unknown command... type help for a list of commands.');
+async function run() {
 
-branches[process.argv[2]].run();
+  if (process.argv[2] == undefined) return console.log('Please specify a command... type help for a list of commands.');
+  if (branches[process.argv[2]] == undefined) return console.log('Unknown command... type help for a list of commands.');
 
-process.exit();
+  await (branches[process.argv[2]].run());
+
+  process.exit();
+
+}
+
+run();
