@@ -7,7 +7,7 @@ const beautifyLib = require('js-beautify').js;
 
 function endpoint(innerText, method, path) {
 
-  return `app.${method}('${path}', function () {\n\n${innerText}\n\n});`;
+  return `app.${method}('${path}', function (req, res) {\n\n${innerText}\n\n});`;
 
 }
 
@@ -30,7 +30,7 @@ function sequelizeObject(name, params) {
 
   for (var param in params) {
 
-    simpleParams += `${param}: Sequelize.${params[param].toUpperCase()},\n`;
+    simpleParams += ` ${param}: Sequelize.${params[param].toUpperCase()},\n`;
 
   }
 

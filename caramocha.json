@@ -9,7 +9,15 @@
         " fun",
         " cute"
     ],
-    "sequelize": {},
+    "sequelize": {
+      "db": "database",
+      "username": "username",
+      "password": "password",
+      "options": {
+        "dialect": "sqlite",
+        "storage": "./db.sqlite"
+      }
+    },
     "objects": [
         {
             "name": "User",

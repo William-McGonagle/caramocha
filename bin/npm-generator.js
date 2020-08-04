@@ -6,7 +6,9 @@ var fileData = {
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node ./index.js"
+  },
   "repository": {},
   "keywords": [],
   "dependencies": {},

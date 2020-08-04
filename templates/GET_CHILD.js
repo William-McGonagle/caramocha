@@ -1,15 +1,26 @@
+const readline = require('readline');
+
+const readlineInterface = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+function ask(questionText) {
+  return new Promise((resolve, reject) => {
+    readlineInterface.question(questionText, (input) => resolve(input) );
+  });
+}
+
 // return finished code
 function generateCode(parameters) {
 
-  return `  if (req.params.${parameters[1]} == undefined) return res.status(400).send('${parameters[2]}');
+  return `if (req.params.${parameters[2]} == undefined) return res.status(400).send('${parameters[3]}');
 
-  ${parameters[0]}.findOne({
+  ${parameters[0]}.findAll({
     where: {
-      id: req.params.${parameters[1]}
+      ${parameters[1].toLowerCase()}Id: req.params.${parameters[2]}
     }
   }).then(function (data) {
-
-    if (data == null) return res.status(404).send('${parameters[3]}');
 
     return res.status(200).json(data);
 
@@ -23,14 +34,14 @@ function generateCode(parameters) {
 }
 
 // return paramters for caramocha file
-function generateParameters(model) {
+async function generateParameters(model) {
 
   return [
+    (await ask("Child: ")),
     model,
     "id",
     "Not All Parameters Given.",
-    "Item Not Found.",
-    "Internal Database Error."
+    "Internal Database Error"
   ];
 
 }
@@ -63,9 +74,6 @@ function generateOAPIResponses() {
     },
     "400": {
       "description": "Not all of the parameters were given to the server."
-    },
-    "404": {
-      "description": "The requested item was not found on the server."
     },
     "500": {
       "description": "Internal Server Error."
