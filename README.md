@@ -1,6 +1,9 @@
 # 🍨 Caramocha
 ### Generate An Entire Website Backend in Under a Minute.
-[![npm_stats](https://img.shields.io/badge/dynamic/json?label=npm&query=downloads&suffix=%20downloads&url=https%3A%2F%2Fapi.npmjs.org%2Fdownloads%2Fpoint%2Flast-week%2Fcaramocha)](https://www.npmjs.com/package/caramocha)
+[![npm_stats](https://img.shields.io/badge/dynamic/json?label=npm&query=downloads&suffix=%20downloads&url=https%3A%2F%2Fapi.npmjs.org%2Fdownloads%2Fpoint%2Flast-week%2Fcaramocha)](https://www.npmjs.com/package/caramocha) 
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/william-mcgonagle/caramocha)
+![GitHub last commit](https://img.shields.io/github/last-commit/william-mcgonagle/caramocha)
+![GitHub stars](https://img.shields.io/github/stars/william-mcgonagle/caramocha?style=social)
 
 ![eye-catcher](/promotional/eye-catcher.png)
 
