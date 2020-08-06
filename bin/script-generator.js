@@ -1,5 +1,3 @@
-const beautifyLib = require('js-beautify').js;
-
 // usage
   // innerText -> stuff inside the endpoint
   // method -> GET, POST, HEAD, DELETE, PUT, ALL
@@ -55,18 +53,8 @@ function require(libraries) {
 
 }
 
-function beautify(data) {
-
-  return beautifyLib(data, {
-    indent_size: 2,
-    space_in_empty_paren: true
-  });
-
-}
-
 module.exports = {
   endpoint: endpoint,
-  beautify: beautify,
   sectionDelimiter: sectionDelimiter,
   sequelizeObject: sequelizeObject,
   require: require

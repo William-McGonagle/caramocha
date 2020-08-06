@@ -1,6 +1,6 @@
 {
   "name": "caramocha",
-  "version": "1.0.8",
+  "version": "1.1.2",
   "description": "Create a website backend in less than a minute.",
   "main": "main.js",
   "bin": {
