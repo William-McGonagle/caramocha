@@ -1,5 +1,6 @@
 # 🍨 Caramocha
 ### Generate An Entire Website Backend in Under a Minute.
+[![npm_stats](https://img.shields.io/badge/dynamic/json?label=npm&query=downloads&suffix=%20downloads&url=https%3A%2F%2Fapi.npmjs.org%2Fdownloads%2Fpoint%2Flast-week%2Fcaramocha)](https://www.npmjs.com/package/caramocha)
 
 ![eye-catcher](/promotional/eye-catcher.png)
 
