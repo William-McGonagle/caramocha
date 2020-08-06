@@ -16,19 +16,25 @@ function ask(questionText) {
 async function run() {
 
   console.log();
-  let name = await ask(" website name: ");
+  let name = await ask(" website-name: ");
 
   let version = await ask(" version: ");
 
   let description = await ask(" description: ");
 
-  let apiBase = await(ask(" api base: (/api/v1/) "));
+  let apiBase = await(ask(" api-base: (/api/v1/) "));
+  if (apiBase == "") apiBase = "/api/v1";
 
   let keywords = (await ask(" keywords (comma seperated): ")).split(',');
+  keywords.forEach((item, i) => {
 
-  let authorName = await ask(" author name: ");
+    keywords[i] = item.trim();
 
-  let useSequelize = ((await ask(" use default sequelize config? (Y/n) ")).toUpperCase() == 'Y');
+  });
+
+  let authorName = await ask(" author-name: ");
+
+  let useSequelize = ((await ask(" default-sequelize-config? (Y/n) ")).toUpperCase() == 'Y');
 
   var sequelize = {};
 
@@ -47,12 +53,13 @@ async function run() {
   } else {
 
     sequelize = {
-        "username": "username",
-        "password": "password",
-        "db": "database",
+        "username": (await ask(" sequelize-username: ")),
+        "password": (await ask(" sequelize-password: ")),
+        "db": (await ask(" sequelize-database: ")),
         "options": {
-          "dialect": "sqlite",
-          "storage": "./db.sqlite"
+          "dialect": (await ask(" sequelize-dialect: ")),
+          "storage": "./db.sqlite",
+          "host": "localhost"
         }
     };
 
@@ -64,27 +71,27 @@ async function run() {
 
   while (addingNewObjects) {
 
-    addingNewObjects = ((await ask(" add another object? (Y/n)")).toUpperCase() == 'Y');
+    addingNewObjects = ((await ask(" add-object? (Y/n)")).toUpperCase() == 'Y');
 
     if (addingNewObjects) {
 
-      var objectName = (  await ask("      object name: "));
-      var objectPath = (  await ask("      object path: "));
+      var objectName = (  await ask("      object-name: "));
+      var objectPath = (  await ask("      object-path: "));
       var objectParams = {};
       var objectPaths = [];
 
-      console.log("      object model: ");
+      console.log("      object-model: ");
 
       var addingNewObjectParams = true;
 
       while (addingNewObjectParams) {
 
-        addingNewObjectParams = ((await ask("         add another model parameter? (Y/n) ")).toUpperCase() == 'Y');
+        addingNewObjectParams = ((await ask("         add-model-parameter? (Y/n) ")).toUpperCase() == 'Y');
 
         if (addingNewObjectParams) {
 
-          var paramName = (await ask("            object param name: "));
-          var paramType = (await ask("            object param type: (text, string, integer, boolean, date) "));
+          var paramName = (await ask("            object-parameter-name: "));
+          var paramType = (await ask("            object-parameter-type: (text, string, integer, boolean, date) "));
 
           objectParams[paramName] = paramType;
 
@@ -92,19 +99,21 @@ async function run() {
 
       }
 
-      console.log("      object paths: ");
+      console.log("      object-paths: ");
 
       var addingNewObjectPaths = true;
 
       while (addingNewObjectPaths) {
 
-        addingNewObjectPaths = ((await ask("         add another object path? (Y/n)")).toUpperCase() == 'Y');
+        addingNewObjectPaths = ((await ask("         add-object-endpoint? (Y/n)")).toUpperCase() == 'Y');
 
         if (addingNewObjectPaths) {
 
-          var paramPath = (await ask("            object param path: "));
-          var paramMethod = (await ask("            object param method: "));
-          var paramType = (await ask("            object param type: (GET, CREATE, LOGIN, SIGNUP) "));
+          var paramPath = (await ask("            object-endpoint-path: "));
+          var paramMethod = (await ask("            object-endpoint-method: ")).toLowerCase();
+          if (!(paramMethod == "post" || paramMethod == "delete" || paramMethod == "get" || paramMethod == "put")) paramMethod = "get";
+
+          var paramType = (await ask("            object-endpoint-template: "));
           var paramParams = [];
 
           if (fs.existsSync(path.join(__dirname, '../templates/' + paramType + ".js"))) {
@@ -150,7 +159,7 @@ async function run() {
   fs.writeFileSync(path.join(process.cwd(), './caramocha.json'), JSON.stringify(file, null, 4));
 
   console.log();
-  console.log(" SUCESSFULLY STARTED CARAMOCHA INSTANCE.");
+  console.log(" ✅  Successfully Started Caramocha Instance.");
 
 }
 
