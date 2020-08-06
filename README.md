@@ -3,7 +3,8 @@
 [![npm_stats](https://img.shields.io/badge/dynamic/json?label=npm&query=downloads&suffix=%20downloads&url=https%3A%2F%2Fapi.npmjs.org%2Fdownloads%2Fpoint%2Flast-week%2Fcaramocha)](https://www.npmjs.com/package/caramocha) 
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/william-mcgonagle/caramocha)
 ![GitHub last commit](https://img.shields.io/github/last-commit/william-mcgonagle/caramocha)
-![GitHub stars](https://img.shields.io/github/stars/william-mcgonagle/caramocha?style=social)
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/william-mcgonagle/caramocha" data-icon="octicon-star" aria-label="Star william-mcgonagle/caramocha on GitHub">![GitHub stars](https://img.shields.io/github/stars/william-mcgonagle/caramocha?style=social)</a>
 
 ![eye-catcher](https://github.com/William-McGonagle/caramocha/raw/master/promotional/eye-catcher.png)
 
