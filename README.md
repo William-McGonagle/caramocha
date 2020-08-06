@@ -5,12 +5,12 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/william-mcgonagle/caramocha)
 ![GitHub stars](https://img.shields.io/github/stars/william-mcgonagle/caramocha?style=social)
 
-![eye-catcher](/promotional/eye-catcher.png)
+![eye-catcher](https://github.com/William-McGonagle/caramocha/raw/master/promotional/eye-catcher.png)
 
 ## how to use
 The first step in getting your website built with Caramocha is getting it installed. Caramocha is not dependent on any other packages, so the installation should be quick and smooth. Since Caramocha is build in Node.js, we opted into using NPM as the installation manager of the CLI. If you do not have NPM, quickly look up a tutorial before you run the Caramocha installation command. 
 
-![npm](/promotional/npm.png)
+![npm](https://github.com/William-McGonagle/caramocha/raw/master/promotional/npm.png)
 
 Once you have Caramocha installed, you can start building your website with it. If you have a `caramocha.json` file in your current working directory, you can skip this step, but otherwise, that is what we are generating.
 
@@ -18,11 +18,11 @@ A `caramocha.json` file stores all of the information about how you want your we
 
 After you run this command, you can always edit the `caramocha.json` file directly to perfect your answers. 
 
-![start](/promotional/caramocha-start.png)
+![start](https://github.com/William-McGonagle/caramocha/raw/master/promotional/caramocha-start.png)
 
 Once you have the `caramocha.json` file, you can start generating the website resources. There are currently four different commands that you can run: `generate`, `generateScript`, `generateOAPI`, and `generateNPM`. These all do what they sound like- importantly, the `generate` command runs the three other commands. This means that you will have the code, the documentation, and the NPM files. But, if you want to individually generate each document, run the each sub-command individually.
 
-![generate](/promotional/caramocha-generate.png)
+![generate](https://github.com/William-McGonagle/caramocha/raw/master/promotional/caramocha-generate.png)
 
 ## about
 Caramocha is powered by an incredibly powerful templating scheme nicknamed Cophi.js. Cophi.js stands for 'Cophi Organizes Parts Headlessly in Javascript'. The idea of Cophi is that you can give it JSON objects, and from those objects, it can generate different items.
