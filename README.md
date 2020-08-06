@@ -3,6 +3,19 @@
 
 ![eye-catcher](/promotional/eye-catcher.png)
 
+## how to use
+The first step in getting your website built with Caramocha is getting it installed. Caramocha is not dependent on any other packages, so the installation should be quick and smooth. Since Caramocha is build in Node.js, we opted into using NPM as the installation manager of the CLI. If you do not have NPM, quickly look up a tutorial before you run the Caramocha installation command. 
+
+![npm](/promotional/npm.png)
+
+Once you have Caramocha installed, you can start building your website with it. If you have a `caramocha.json` file in your current working directory, you can skip this step, but otherwise, that is what we are generating.
+
+A `caramocha.json` file stores all of the information about how you want your website to act, behave, and achieve greatness. When you run this command, Caramocha will bring you through a quick survey about the information, url paths and database objects of the site. Answer all of these questions to the best of your ability. And remember, a blank answer is fine, but restarting wastes all your precious time. 
+
+After you run this command, you can always edit the `caramocha.json` file directly to perfect your answers. 
+
+![start](/promotional/caramocha-start.png)
+
 ## about
 Caramocha is powered by an incredibly powerful templating scheme nicknamed Cophi.js. Cophi.js stands for 'Cophi Organizes Parts Headlessly in Javascript'. The idea of Cophi is that you can give it JSON objects, and from those objects, it can generate different items.
 
