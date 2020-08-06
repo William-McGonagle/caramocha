@@ -1,5 +1,7 @@
-# Caramocha
-Generate entire website backends in under a minute.
+# 🍨 Caramocha
+### Generate An Entire Website Backend in Under a Minute.
+
+![eye-catcher]()
 
 ## about
 Caramocha is powered by an incredibly powerful templating scheme nicknamed Cophi.js. Cophi.js stands for 'Cophi Organizes Parts Headlessly in Javascript'. The idea of Cophi is that you can give it JSON objects, and from those objects, it can generate different items.
