@@ -11,7 +11,7 @@ function run() {
 
   for (var command in commandExplainations) {
 
-    console.log(`\n# "${command}"\n${commandExplainations[command]}\n`);
+    console.log("\n👉 \033[4mcaramocha " + command + "\033[0m\n" + commandExplainations[command] + "\n");
 
   }
 

@@ -63,7 +63,7 @@ function run() {
 
   fs.writeFileSync(path.join(process.cwd(), "./api.json"), JSON.stringify(outData, null, 4));
 
-  console.log("successfully created OpenApi File.");
+  console.log(" ✅  Sucessfully Generated OpenAPI File.");
 
 }
 

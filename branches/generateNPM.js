@@ -20,7 +20,7 @@ function run() {
 
   npm.generateNPMFile();
 
-  console.log("Successfully Generated NPM File");
+  console.log(" ✅  Sucessfully Generated NPM File.");
 
 }
 

@@ -52,8 +52,6 @@ function run() {
 
     for (var n = 0; n < caramochaObject.objects[i].paths.length; n++) {
 
-      console.log(path.join(__dirname, "../templates/" + caramochaObject.objects[i].paths[n].type + ".js"));
-
       if (fs.existsSync(path.join(__dirname, "../templates/" + caramochaObject.objects[i].paths[n].type + ".js"))) {
 
         var template = require(path.join(__dirname, "../templates/" + caramochaObject.objects[i].paths[n].type + ".js"));
@@ -72,7 +70,7 @@ function run() {
 
   fs.writeFileSync(path.join(process.cwd(), "./index.js"), output);
 
-  console.log("Generated Website Script.");
+  console.log(" ✅  Sucessfully Generated Website Script.");
 
 }
 
