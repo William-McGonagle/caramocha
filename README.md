@@ -16,6 +16,10 @@ After you run this command, you can always edit the `caramocha.json` file direct
 
 ![start](/promotional/caramocha-start.png)
 
+Once you have the `caramocha.json` file, you can start generating the website resources. There are currently four different commands that you can run: `generate`, `generateScript`, `generateOAPI`, and `generateNPM`. These all do what they sound like- importantly, the `generate` command runs the three other commands. This means that you will have the code, the documentation, and the NPM files. But, if you want to individually generate each document, run the each sub-command individually.
+
+![generate](/promotional/caramocha-update.png)
+
 ## about
 Caramocha is powered by an incredibly powerful templating scheme nicknamed Cophi.js. Cophi.js stands for 'Cophi Organizes Parts Headlessly in Javascript'. The idea of Cophi is that you can give it JSON objects, and from those objects, it can generate different items.
 
