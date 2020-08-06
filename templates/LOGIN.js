@@ -1,7 +1,13 @@
 // return finished code
 function generateCode(parameters) {
 
-  return "";
+  return `  if (req.body.username == undefined || req.body.password == undefined) return res.status(400).send('${parameters[2]});
+
+  ${parameters[0]}.findOne({
+    where: {
+      ${parameters[1]}: req.body.username
+    }
+  })`;
 
 }
 

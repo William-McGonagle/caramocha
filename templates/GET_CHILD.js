@@ -37,7 +37,7 @@ function generateCode(parameters) {
 async function generateParameters(model) {
 
   return [
-    (await ask("Child: ")),
+    (await ask("                  Child: ")),
     model,
     "id",
     "Not All Parameters Given.",

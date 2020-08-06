@@ -41,17 +41,21 @@ function run() {
 
     for (var i = 0; i < caramochaData.objects[n].paths.length; i++) {
 
-      var currentPath = caramochaData.apiBase + caramochaData.objects[n].name + caramochaData.objects[n].paths[i].path;
-      outData.paths[currentPath] = {};
-      outData.paths[currentPath][caramochaData.objects[n].paths[i].method] = {
-        tags: [
-          caramochaData.objects[n].name
-        ],
-        description: "",
-        operationId: (caramochaData.objects[n].name + caramochaData.objects[n].paths[i].path).toUpperCase(),
-        parameters: require('../templates/' + caramochaData.objects[n].paths[i].type + '.js').generateOAPIParameters(), // generate parameters from TYPE
-        responses: require('../templates/' + caramochaData.objects[n].paths[i].type + '.js').generateOAPIResponses() // generate responses from TYPE
-      };
+      if (fs.existsSync(path.join(__dirname, '../templates/' + caramochaData.objects[n].paths[i].type + '.js'))) {
+
+        var currentPath = caramochaData.apiBase + caramochaData.objects[n].name + caramochaData.objects[n].paths[i].path;
+        outData.paths[currentPath] = {};
+        outData.paths[currentPath][caramochaData.objects[n].paths[i].method] = {
+          tags: [
+            caramochaData.objects[n].name
+          ],
+          description: "",
+          operationId: (caramochaData.objects[n].name + caramochaData.objects[n].paths[i].path).toUpperCase(),
+          parameters: require(path.join(__dirname, '../templates/' + caramochaData.objects[n].paths[i].type + '.js')).generateOAPIParameters(), // generate parameters from TYPE
+          responses: require(path.join(__dirname, '../templates/' + caramochaData.objects[n].paths[i].type + '.js')).generateOAPIResponses() // generate responses from TYPE
+        };
+
+      }
 
     }
 

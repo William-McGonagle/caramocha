@@ -52,10 +52,16 @@ function run() {
 
     for (var n = 0; n < caramochaObject.objects[i].paths.length; n++) {
 
-      var template = require("../templates/" + caramochaObject.objects[i].paths[n].type + ".js");
-      var internalText = template.generateCode(caramochaObject.objects[i].paths[n].params);
+      console.log(path.join(__dirname, "../templates/" + caramochaObject.objects[i].paths[n].type + ".js"));
 
-      output += script.endpoint(internalText, caramochaObject.objects[i].paths[n].method, caramochaObject.apiBase + caramochaObject.objects[i].path + caramochaObject.objects[i].paths[n].path) + "\n\n";
+      if (fs.existsSync(path.join(__dirname, "../templates/" + caramochaObject.objects[i].paths[n].type + ".js"))) {
+
+        var template = require(path.join(__dirname, "../templates/" + caramochaObject.objects[i].paths[n].type + ".js"));
+        var internalText = template.generateCode(caramochaObject.objects[i].paths[n].params);
+
+        output += script.endpoint(internalText, caramochaObject.objects[i].paths[n].method, caramochaObject.apiBase + caramochaObject.objects[i].path + caramochaObject.objects[i].paths[n].path) + "\n\n";
+
+      }
 
     }
 
